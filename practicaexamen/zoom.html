@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cambiar tamaño en funcion de un select</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <img src="/jvsc/imagenes/mario.jpeg" alt="" width="300px" height="300px" id="mario">
+    <form action="">
+        <label for="">cambiar tamaño de imagen</label>
+        <select name="" id="tamaños">
+            <option value="100px">100px</option>
+            <option value="200px">200px</option>
+            <option value="300px">300px</option>
+        </select>
+    </form>
+    <button onclick="cambiartamaño()">tamaño</button>
+    <script>
+        function cambiartamaño(){
+        var img = document.getElementById("mario");
+        var tamaño = document.getElementById("tamaños");
+        img.style.width = tamaño.value;
+        img.style.height =  tamaño.value;
+        }
+    </script>
+
+</body>
+</html>

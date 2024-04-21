@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagen</title>
+    <style>
+        div{
+            width: 300px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id caja2></div>
+    <div id="caja">
+    <img src="imagenes/mario.jpeg" alt="" height="300px" width="300px" id="mario">
+    </div>
+    <button onclick="cambiartamaño()">200px</button>
+    <button onclick="volvertamaño()">300px</button>
+    <button onclick="colordiv()">color</button>
+<script>
+    function cambiartamaño(){
+        var imagen200px= document.getElementById("mario");
+        imagen200px.style.height="200px";
+        imagen200px.style.width="200px";
+    }
+    function volvertamaño(){
+        var imagen200px= document.getElementById("mario");
+        imagen200px.style.height="300px";
+        imagen200px.style.width="300px";
+    }
+    function colordiv(){
+        var colordiv= document.getElementById("caja");
+        colordiv.style.backgroundColor="green"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica examen</title>
+</head>
+<body>
+    <button onclick="media()">1.Media 4 números</button>
+    <h1>Pedido</h1>
+    <form action="algo.php" onsubmit="return validar()">
+        <label for="">Elija Producto</label>
+        <select name="producto" id="select" onchange="imagen()">
+            <option value="Elija">Elija Producto</option>
+            <option value="PC">Ordenador</option>
+            <option value="laptop">Portátil</option>
+            <option value="tablet">Tablet</option>
+        </select>
+        <input type="submit" value="comprar">
+    </form>
+    <img src="" alt="" height="300px" width="300px" id="imagen">
+    <script>
+        function imagen(){
+            var select = document.getElementById("select")
+            var img = document.getElementById("imagen")
+            if( select.value == "Elija"){
+                img.src = ""
+            }
+            if(select.value == "PC"){
+                img.src = "imagen/ordenador.jpg";
+            }
+            if(select.value =="laptop"){
+                img.src = "imagen/portatil.jpg"
+            }
+            if(select.value =="tablet"){
+                img.src = "imagen/tablet.jpg"
+            }
+        }
+
+        function validar(){
+            var sel = document.getElementById("select");
+            if(sel.value == "Elija"){
+                alert("elija un producto")
+                return false
+                
+            }
+            return true
+        }
+
+        function media(){
+            var numero1 = parseInt(prompt("dime un numero"));
+            var numero2 = parseInt(prompt("dime otro"));
+            var numero3 = parseInt(prompt("dime otro"));
+            var numero4 = parseInt(prompt("dime otro"));
+            var media = (numero1+numero2+numero3+numero4)/4
+            alert("la media es "+media);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repaso</title>
+</head>
+<body>
+
+<button onclick="alineacion()">alineacion</button>
+<button onclick="factorial()">calcular factorial</button>
+<button onclick="multiplicar()">calcular</button>
+
+    <script>
+        function factorial(){
+            var numero = prompt("dime numero para calcular factorial");
+            var factorial = 1;
+            for (var i = 1; i<= numero; i++) {
+                factorial= factorial*i;
+            }
+            alert("el factorial de un numero es "+factorial)
+        }
+
+        function alineacion(){
+            var alineacion=["benzema","bale","Marcelo"];
+            alineacion[4]="casemiro";
+            var posicion=prompt("dime posicion");
+            alert(alineacion[posicion]);
+        }
+        function multiplicar(){
+            var numero = prompt("dime un numero");
+            for (var i = 1; i <= numero;i++){
+                var numero1 = numero*i;
+                document.write("<tr><td>"+numero+"</td><td> por </td><td>"+i+"</td><td> es igual a "+numero1+"</td></tr><p>");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+</head>
+<body>
+    Pon tu nombre: <input type="text" id="fname" onblur="mayusculas()">
+    <form action="">
+        <label for="">provincia</label>
+    <select name="provincia" id="provincia" onchange="cambianumer()">
+        <option value="noselecionado">...seleccione</option>
+        <option value="cr">Ciudad Real</option>
+        <option value="ab">Albacete</option>
+        <option value="cu">Cuenca</option>
+        <option value="to">Toledo</option>
+        <option value="gu">Guadalajara</option>
+    </select>
+    <h1 id="hola"></h1>
+</form>
+    <script>
+        function mayusculas(){
+            var nombre = document.getElementById("fname")
+            nombre.value = nombre.value.toUpperCase();
+        }
+        function cambianumer(){
+            var provincia = document.getElementById("provincia");
+            var h1 = document.getElementById("hola")
+            if(provincia.value == "cr"){
+                h1.innerHTML +="hola adios"
+            }
+        }
+    </script>
+</body>
+</html>
